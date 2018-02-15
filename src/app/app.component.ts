@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+}
+
+export interface Post {
+  userId?: number;
+  id?: number;
+  title?: string;
+  body?: string;
 }
