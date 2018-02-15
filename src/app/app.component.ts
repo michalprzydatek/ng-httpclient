@@ -17,18 +17,29 @@ export class AppComponent {
       console.log(posts);
     });
   }
-
   getPost() {
+    this.httpService.getPost(1).subscribe( post => {
+      console.log(post);
+    });
+  }
 
+  getPostByUser() {
+    this.httpService.getPostByUser(1).subscribe( posts => {
+      console.log(posts);
+    });
   }
 
   addPost() {
-    const post: Post = ({
+    const p: Post = ({
       userId: 1,
       id: null,
       title: 'Mój post',
       body: 'body'
     });
+
+    this.httpService.addPost(p).subscribe(post => {
+      console.log(post);
+    })
   }
 
   changePost() {
