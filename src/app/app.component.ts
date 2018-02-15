@@ -8,8 +8,6 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
 
-  title = 'app';
-
   constructor(private httpService: HttpService) {
 
   }
